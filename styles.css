@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.soroban {
+    display: flex;
+    border: 5px solid #333;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.rod {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;  /* Align lower beads at the bottom */
+    align-items: center;
+    margin: 0 10px;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    height: 300px;
+    position: relative;
+}
+
+/* Style for the count box */
+.count-box {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+/* Upper and lower bead styles */
+/* Define the default pink color for the beads */
+.upper-bead, .lower-bead {
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: pink;  /* Default pink color */
+    border: 2px solid black; /* Thick black border */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add color transition */
+}
+
+/* Upper bead changes to green when active (moved down) */
+.upper-bead.active {
+    background-color: green;
+    transform: translateY(40px); /* Move upper bead down */
+}
+
+/* Lower beads change to green when active (moved up) */
+.lower-bead.active {
+    background-color: green;
+    transform: translateY(-75px); /* Move lower beads up */
+}
+
+.upper-bead {
+    margin-top: 30px;  /* Space above the upper bead */
+}
+
+/* Separator line between upper and lower beads, moved slightly up */
+.separator {
+    width: 60px;              /* Width of the separator line */
+    height: 5px;              /* Thickness of the line */
+    background-color: #333;    /* Color of the line */
+    margin-top: 20px;          /* Move separator up by reducing the top margin */
+    margin-bottom: auto;       /* Auto will take up remaining space at the bottom */
+}
+
+/* Lower bead styles, stacked with no margin */
+.lower-bead {
+    margin: 0;  /* Remove any margin between lower beads */
+}
+
+/* Upper bead movement */
+.upper-bead.active {
+    transform: translateY(20px); /* Move upper bead down just before the separator */
+}
+
+/* Lower bead movement */
+.lower-bead.active {
+    transform: translateY(-40px); /* Move lower beads up just before the separator */
+}
+/* Container for the logo and soroban */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Add space between the logo and the abacus */
+    padding: 20px;
+}
+
+/* Style for the logo */
+.logo img {
+    max-width: 150px; /* Adjust the size as necessary */
+    height: auto;
+}
