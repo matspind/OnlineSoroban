@@ -8,59 +8,78 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <body>
     <div class="container">
         <!-- Add the MatLingo logo -->
         <div class="logo">
             <img src="MAtlingo logo.png" alt="MatLingo Logo" />
         </div>
 
-        <div class="soroban">
-            <!-- First Rod -->
-            <div class="rod">
-                <div class="count-box" id="count1">0</div>
-                <div class="upper-bead"></div>
-                <div class="separator"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
+        <!-- Start Button Positioned Above the Soroban -->
+        <button id="startButton">Start</button>
+
+        <!-- Soroban Container -->
+        <div class="soroban-container">
+            <div class="soroban">
+                <!-- First Rod -->
+                <div class="rod">
+                    <div class="count-box" id="count1">0</div>
+                    <div class="upper-bead"></div>
+                    <div class="separator"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                </div>
+
+                <!-- Second Rod -->
+                <div class="rod">
+                    <div class="count-box" id="count2">0</div>
+                    <div class="upper-bead"></div>
+                    <div class="separator"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                </div>
+
+                <!-- Third Rod -->
+                <div class="rod">
+                    <div class="count-box" id="count3">0</div>
+                    <div class="upper-bead"></div>
+                    <div class="separator"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                </div>
+
+                <!-- Fourth Rod -->
+                <div class="rod">
+                    <div class="count-box" id="count4">0</div>
+                    <div class="upper-bead"></div>
+                    <div class="separator"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                    <div class="lower-bead"></div>
+                </div>
             </div>
 
-            <!-- Second Rod -->
-            <div class="rod">
-                <div class="count-box" id="count2">0</div>
-                <div class="upper-bead"></div>
-                <div class="separator"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
-            </div>
+            <!-- Calculation and Result Boxes Aligned Vertically -->
+            <div class="calculation-container">
+                <!-- Calculation Box to the Right of the Soroban -->
+                <div class="calculation-box">
+                    <h2 id="calculation" class="calculation-text">Get Ready...</h2>
+                </div>
 
-            <!-- Third Rod -->
-            <div class="rod">
-                <div class="count-box" id="count3">0</div>
-                <div class="upper-bead"></div>
-                <div class="separator"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
-            </div>
-
-            <!-- Fourth Rod -->
-            <div class="rod">
-                <div class="count-box" id="count4">0</div>
-                <div class="upper-bead"></div>
-                <div class="separator"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
-                <div class="lower-bead"></div>
+                <!-- Result Box (Displays the final result after "Finished!") -->
+                <div class="result-box">
+                    <h2 id="result" class="result-text">Result: </h2>
+                </div>
             </div>
         </div>
     </div>
     <!-- Link to the external JavaScript file -->
     <script src="scripts.js"></script>
 </body>
-</html>
