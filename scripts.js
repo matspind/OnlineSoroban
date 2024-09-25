@@ -45,16 +45,22 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Can move up
                     const allDown = Array.from(lowerBeads).every(b => !b.classList.contains('active'));
                     if (index === 0 || lowerBeads[index - 1].classList.contains('active') || allDown) {
-                        bead.classList.add('active');
+                        // Move all beads up, including those below the clicked bead
+                        for (let i = 0; i <= index; i++) {
+                            lowerBeads[i].classList.add('active');
+                        }
                     } else {
                         alert("Move the bead above first!");
                     }
                 } else {
                     // Can move down
-                    if (index === lowerBeads.length - 1 || !lowerBeads[index + 1].classList.contains('active')) {
-                        bead.classList.remove('active');
-                    } else {
-                        alert("Move the bead below first!");
+                    // When moving down, all beads below will also move down
+                    for (let i = index; i < lowerBeads.length; i++) {
+                        if (lowerBeads[i].classList.contains('active')) {
+                            lowerBeads[i].classList.remove('active');
+                        } else {
+                            break; // Stop if a bead is already down
+                        }
                     }
                 }
                 updateCount(); // Update the count whenever a lower bead is clicked
@@ -62,3 +68,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
